@@ -25,7 +25,7 @@
 
 struct PendulumState {
     double x = 0.0, x_d = 0.0, x_dd = 0.0;
-    double theta = 0.0, theta_d = 0.0, theta_dd = 0.0;
+    double theta = 3.141519, theta_d = 0.0, theta_dd = 0.0;
     double F = 0.0;
     bool balanced = false;
 };
