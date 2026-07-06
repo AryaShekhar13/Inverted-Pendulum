@@ -9,7 +9,7 @@ def get_gain(q_pos=50,
 
     M = 10.0
     m = 1.0
-    l = 10.0
+    l = 1.0
     g = 9.81
 
     A = np.array([
