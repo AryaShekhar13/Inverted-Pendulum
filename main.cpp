@@ -1,7 +1,6 @@
 #include <iostream>
 #include <thread>
 #include <conio.h>
-#include <numbers>
 #include <cmath>
 
 using namespace std;
@@ -23,18 +22,17 @@ int main(){
     double theta_d = 0;
     double theta_dd = 0;
 
-    int pi = numbers::pi;
     char ch;
-    const double dt = 0.5;   
+    const double dt = 0.05;   
 
-    double k1 = -1.0000;
-    double k2 = -6.645651;
-    double k3 = -324.047249;
-    double k4 = -317.096591;
+    double k1 = -2.23606798;
+    double k2 = -11.43582202;
+    double k3 = -393.02754596;
+    double k4 = -386.7813713;
 
     //coords
     double X = 0;
-    double Y = -1 * l;
+    double Y = l;
 
     //main loop
     while (true) {
@@ -42,8 +40,6 @@ int main(){
         //eqns motion
 
         F = -1*(k1*x + k2*x_d + k3*theta + k4*theta_d);
-
-        //x_dd = (F + (l*theta_d*theta_d*sin(theta)) - l*theta_dd*cos(theta))/(M+m);
 
         x_dd = (F + (m*l*theta_d*theta_d*sin(theta)) - m*g*sin(theta)*cos(theta))/(M + m - m*cos(theta)*cos(theta));
         theta_dd = ((g*sin(theta) - x_dd*cos(theta))/l);
@@ -55,7 +51,7 @@ int main(){
         theta += theta_d*dt;
 
         X = x + l * sin(theta);
-        Y = -1*l * cos(theta);
+        Y = l * cos(theta);
 
     if (isnan(theta)) {
         cout << "theta became NaN" <<endl;
@@ -79,6 +75,6 @@ int main(){
         break;
     }
 
-        cout<<"X coordinate: "<< X <<" "<<"Y coordinate: "<< Y <<endl;
+        cout<<"X coordinate: "<< X <<" "<<"Y coordinate: "<< Y <<" "<<"Force: "<< F <<endl;
     }
 }

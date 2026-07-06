@@ -1,2 +1,4 @@
 *.exe
-tempCodeRunnerFile.*
+tempCodeRunnerFile.
+venv/
+__pycache__*
