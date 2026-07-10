@@ -1,2 +1,2 @@
 # Inverted-Pendulum
-Run Test.cpp for now
+Run -> Ctr + Shift + f5
