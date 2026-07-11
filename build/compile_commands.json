@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/aryas/OneDrive/Desktop/Project/Inverted-Pendulum/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -g -std=gnu++17 -o CMakeFiles\\Pendulum.dir\\test.cpp.obj -c C:\\Users\\aryas\\OneDrive\\Desktop\\Project\\Inverted-Pendulum\\test.cpp",
-  "file": "C:/Users/aryas/OneDrive/Desktop/Project/Inverted-Pendulum/test.cpp",
-  "output": "C:/Users/aryas/OneDrive/Desktop/Project/Inverted-Pendulum/build/CMakeFiles/Pendulum.dir/test.cpp.obj"
-}
-]
