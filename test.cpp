@@ -1,21 +1,3 @@
-// Inverted pendulum on a cart — SFML 3.0 visualization
-//
-// Build (vcpkg or system SFML 3 install):
-//   g++ -std=c++17 inverted_pendulum_sfml3.cpp -o pendulum \
-//       -lsfml-graphics -lsfml-window -lsfml-system
-//
-// Needs a font file next to the executable (edit FONT_PATH below).
-//
-// SFML3 API notes vs SFML2 (since you're porting from your old sim):
-//   - sf::VideoMode takes a Vector2u:            sf::VideoMode({800u, 600u})
-//   - window.pollEvent() returns std::optional<sf::Event>, not bool+ref
-//   - sf::Event is queried with event->is<T>() / event->getIf<T>()
-//   - sf::Text has NO default ctor — must be constructed with a font:
-//         sf::Text text(font, "string", 16)
-//   - sf::Font::loadFromFile -> sf::Font::openFromFile
-//   - Shape setPosition/setOrigin/RectangleShape ctor take sf::Vector2f
-
-
 //>>>Disclaimer Written by ai for now
 #include <SFML/Graphics.hpp>
 #include <cmath>
@@ -32,14 +14,14 @@ struct PendulumState {
 
 class PendulumSim {
 public:
-    // physical parameters
-    const double M = 10.0;   // cart mass
-    const double m = 1.0;    // bob mass
-    const double l = 1.0;    // pendulum length (m)
+    //parameters
+    const double M = 10.0;  
+    const double m = 1.0;    
+    const double l = 1.0;    
     const double g = 9.81;
     const double dt = 0.01;
 
-    // LQR gains (about theta = 0, upright)
+    // LQR gains
     const double k1 = -2.23606798;
     const double k2 = -8.43909272;
     const double k3 = -262.37833267;

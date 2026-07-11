@@ -11,6 +11,13 @@ add_executable(Pendulum
     test.cpp
 )
 
+add_custom_command(TARGET Pendulum POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        $<TARGET_RUNTIME_DLLS:Pendulum>
+        $<TARGET_FILE_DIR:Pendulum>
+    COMMAND_EXPAND_LISTS
+)
+
 target_link_libraries(Pendulum PRIVATE
     SFML::Graphics
     SFML::Window
