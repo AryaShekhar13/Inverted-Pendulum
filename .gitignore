@@ -1,4 +1,6 @@
 *.exe
 tempCodeRunnerFile.
 venv/
+build/
 __pycache__*
+!Pendulum.exe
