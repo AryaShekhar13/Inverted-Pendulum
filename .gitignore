@@ -3,4 +3,5 @@
 tempCodeRunnerFile.
 venv/
 build/
-__pycache__*
+__pycache__
+.vscode*
