@@ -67,7 +67,7 @@ public:
     }
 };
 
-int main() {
+int main1() {
     const unsigned WIN_W = 1000, WIN_H = 600;
     sf::RenderWindow window(sf::VideoMode({WIN_W, WIN_H}), "Inverted Pendulum — SFML 3");
     window.setFramerateLimit(120);

@@ -8,6 +8,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
 add_executable(Pendulum
+    main.cpp
+    bob.cpp
+    physics.cpp
     test.cpp
 )
 
